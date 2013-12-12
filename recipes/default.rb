@@ -19,7 +19,9 @@
 
 prefix = node['authorization']['sudo']['prefix']
 
-package 'sudo'
+package 'sudo' do
+  not_if node['platform'] = 'mac_os_x'
+end
 
 if node['authorization']['sudo']['include_sudoers_d']
   directory "#{prefix}/sudoers.d" do
