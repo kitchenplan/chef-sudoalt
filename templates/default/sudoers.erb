@@ -30,9 +30,6 @@ Defaults	env_keep += "TZ"
 Defaults	env_keep += "DISPLAY XAUTHORIZATION XAUTHORITY"
 Defaults	env_keep += "EDITOR VISUAL"
 Defaults	env_keep += "HOME MAIL"
-<% @sudoers_defaults.each do |defaults| -%>
-Defaults      <%= defaults %>
-<% end -%>
 
 # Runas alias specification
 
