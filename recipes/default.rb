@@ -20,7 +20,7 @@
 prefix = node['authorization']['sudo']['prefix']
 
 package 'sudo' do
-  not_if node['platform'] = 'mac_os_x'
+  not_if node['platform'] == 'mac_os_x'
 end
 
 if node['authorization']['sudo']['include_sudoers_d']
