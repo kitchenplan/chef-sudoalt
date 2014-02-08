@@ -1,9 +1,8 @@
+language: ruby
+gemfile:
+   - test/support/Gemfile
 rvm:
-  - 1.9.3
   - 2.0.0
-before_script:
-  - bundle exec berks install
 script:
-  - bundle exec foodcritic -f any .
-  - bundle exec rspec --color --format progress
-  - bundle exec rubocop
+  - bundle exec rake knife
+  - bundle exec rake foodcritic
